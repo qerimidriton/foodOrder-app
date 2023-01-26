@@ -30,7 +30,7 @@ const Login = ({ updateUser }) => {
     evt.preventDefault();
     console.log('submitting', username);
     axios
-      .post('http://localhost:5001/api/auth/login', username)
+      .post('https://foodorder-api.onrender.com/api/auth/login', username)
       .then((res) => {
         console.log('res', res);
         dispatch(loginSuccess(res.data));
